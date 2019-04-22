@@ -10,3 +10,4 @@ docker exec -it [container-name] bash
 
 mysql -u root -p
 [enter-password]
+

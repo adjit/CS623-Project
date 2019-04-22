@@ -30,3 +30,55 @@ INSERT INTO REVIEWER (EmailAddr, FirstName, LastName, PhoneNum, Affiliation, Aut
         'Need to do a better job explaining how to use the measurements to find the best path',
         'The authors needed to elaborate more on their topic')
 ;
+INSERT INTO SUBMITS_PAPER (Paper_id, Author_id) VALUES
+    (1, 'abc@123.com'),
+    (2, 'alpha@bravo.com'),
+    (3, 'golf@hotel.com')
+;
+INSERT INTO REVIEW (Paper_id, Reviewer_id, Recommendation, Merit_Score, 
+                    Readability_Score, Originality_Score, Relevance_Score) VALUES
+    (1, 'delta@echo.com', 'Overall recommendation to pass this paper to the next round',
+        7, 7, 9, 4),
+    (1, 'charlie@echo.com', 'Do not send to next round',
+        5, 6, 6, 3),
+    (2, 'tango@whiskey.com', 'Qualifies to be sent to next round',
+        8, 9, 7, 6),
+    (2, 'foxtrot@bravo.com', 'Paper eligible for next round',
+        7, 8, 6, 7),
+    (3, 'papa@charlie.com', 'Paper does not qualify to be sent to next round',
+        5, 6, 7, 4)
+;
+INSERT INTO SUBMITS_REVIEW (Reviewer_id, Review_id) VALUES
+    ('delta@echo.com', 1),
+    ('charlie@echo.com', 2),
+    ('tango@whiskey.com', 3),
+    ('foxtrot@bravo.com', 4),
+    ('papa@charlie.com', 5)
+;
+INSERT INTO TOPIC (Topic_Name) VALUES
+    ('Human Improvement'),
+    ('Psychology'),
+    ('Computer Science'),
+    ('Information Technology'),
+    ('Math'),
+    ('Biology'),
+    ('Chemistry')
+;
+INSERT INTO HAS_TOPIC (Topic_id, Reviewer_id) VALUES
+    (1, 'delta@echo.com'),
+    (2, 'delta@echo.com'),
+    (3, 'charlie@echo.com'),
+    (4, 'charlie@echo.com'),
+    (5, 'charlie@echo.com'),
+    (6, 'tango@whiskey.com'),
+    (7, 'foxtrot@bravo.com'),
+    (4, 'papa@charlie.com'),
+    (5, 'papa@charlie.com')
+;
+INSERT INTO ASSIGNED_PAPER (Paper_id, Reviewer_id) VALUES
+    (1, 'delta@echo.com'),
+    (1, 'charlie@echo.com'),
+    (2, 'tango@whiskey.com'),
+    (2, 'foxtrot@bravo.com'),
+    (3, 'papa@charlie.com')
+;

@@ -59,7 +59,23 @@ CREATE TABLE SUBMITS_REVIEW (
 CREATE TABLE TOPIC (
     Topic_id        INT AUTO_INCREMENT,
     Topic_Name      VARCHAR(255),
+    PRIMARY KEY (Topic_id)
+);
+
+CREATE TABLE HAS_TOPIC (
+    HasTopic_id     INT AUTO_INCREMENT,
+    Topic_id        INT,
     Reviewer_id     VARCHAR(50),
-    PRIMARY KEY (Topic_id),
+    PRIMARY KEY (HasTopic_id),
+    FOREIGN KEY (Topic_id) REFERENCES TOPIC(Topic_id),
+    FOREIGN KEY (Reviewer_id) REFERENCES REVIEWER(EmailAddr)
+);
+
+CREATE TABLE ASSIGNED_PAPER (
+    Assignment_id   INT AUTO_INCREMENT,
+    Paper_id        INT,
+    Reviewer_id     VARCHAR(50),
+    PRIMARY KEY (Assignment_id),
+    FOREIGN KEY (Paper_id) REFERENCES PAPERS(Paper_id),
     FOREIGN KEY (Reviewer_id) REFERENCES REVIEWER(EmailAddr)
 );
