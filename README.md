@@ -4,7 +4,7 @@ Project for CS623
 Using MySQL this project creates a database for Conference_Review. This particular project utilizes Docker and a container running mysql in order to execute and run the database.
 
 ## MySQL Database Tables
-> +-----------------------------+  
+> <pre>+-----------------------------+  
 > | Tables_in_Conference_Review |  
 > +-----------------------------+  
 > | ASSIGNED_PAPER              |  
@@ -16,7 +16,7 @@ Using MySQL this project creates a database for Conference_Review. This particul
 > | SUBMITS_PAPER               |  
 > | SUBMITS_REVIEW              |  
 > | TOPIC                       |  
-> +-----------------------------+  
+> +-----------------------------+  </pre>
 
 ## Commands to create the docker container and enter the MySQL database
 
