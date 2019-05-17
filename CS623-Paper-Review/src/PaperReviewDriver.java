@@ -47,6 +47,9 @@ public class PaperReviewDriver {
 					"I really like using SQL", "mysql.pdf", conn);
 			deleteAuthor(conn);
 			
+			System.out.println("Continuing...");
+			System.out.println("==================");	
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -159,9 +162,7 @@ public class PaperReviewDriver {
 			System.out.println("Trying to delete has cause a cannot delete parent error");
 			e.printStackTrace();
 		}
-		
-		System.out.println("Continuing...");
-		System.out.println("==================");		
+			
 	}
 
 }
