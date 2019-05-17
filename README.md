@@ -27,7 +27,7 @@ Using MySQL this project creates a database for Conference_Review. This particul
 ###### While in the root of the project run the below commands in order in order to 
 `docker build -t [image-name] .`
 
-`docker run -it --name [container-name] -e MYSQL_ROOT_PASSWORD=pass -d [image-name]`
+`docker run -it -p 3306:3306 --name [container-name] -e MYSQL_ROOT_PASSWORD=pass -d [image-name]`
 
 `docker exec -it [container-name] bash`
 
